@@ -38,7 +38,7 @@ public class ValidIDandPassPagefactory {
 	
 	public void setPassword(String Password) throws InterruptedException {
 		txtPassword.clear();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		txtPassword.sendKeys(Password);
 	}
 	

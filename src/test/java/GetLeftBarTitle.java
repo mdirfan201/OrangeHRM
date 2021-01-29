@@ -34,11 +34,10 @@ public class GetLeftBarTitle {
 		String getAccountJob=driver.findElement(By.xpath("//span[@id='account-job']")).getText();
 		System.out.println("The title is on left bar is: "+ getAccountJob);
 		
+		Thread.sleep(5000);
+		driver.close();
 		
 }
 	
-	@AfterMethod
-	public void tearDown() {
-		driver.close();
-	}
+	
 }

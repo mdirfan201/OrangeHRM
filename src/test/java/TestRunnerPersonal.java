@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.OrangeHRMPageFactory.PersonalDetailsPageFactory;
@@ -61,5 +62,14 @@ public class TestRunnerPersonal {
 		JavascriptExecutor jse1= (JavascriptExecutor)driver;
 		jse1.executeScript("scrollBy(0,900)");
 		ScreenShotUtility.CaptureScreenShot(driver, "Verify Checkbox");
+		Thread.sleep(5000);
+		
+		driver.close();
 	}
+	
+
+//	@AfterMethod
+//	public void tearDown() {
+//		driver.close();
+//	}
 }

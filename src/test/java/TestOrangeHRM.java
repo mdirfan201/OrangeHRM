@@ -24,17 +24,17 @@ public class TestOrangeHRM {
 		
 		Thread.sleep(2000);
 		
-		/*
-		 * InvalidCredentials invalid= new InvalidCredentials(driver);
-		 * invalid.setUserName("admin12345"); 
-		 * invalid.setPassword("admin");
-		 * Thread.sleep(2000); invalid.ClickLoginBtn();
-		 * 
-		 * Thread.sleep(3000); 
-		 * String InvalidGetText=driver.findElement(By.xpath("//div[contains(text(),'Invalid Credentials')]")).getText(); 
-		 * System.out.println("Massage for InvalidCredentials is: "+InvalidGetText); 
-		 * Thread.sleep(4000);
-		 */
+		
+		  InvalidCredentials invalid= new InvalidCredentials(driver);
+		  invalid.setUserName("admin12345"); 
+		  invalid.setPassword("admin");
+		  Thread.sleep(2000); invalid.ClickLoginBtn();
+		  
+		  Thread.sleep(3000); 
+		  String InvalidGetText=driver.findElement(By.xpath("//div[contains(text(),'Invalid Credentials')]")).getText(); 
+		  System.out.println("Massage for InvalidCredentials is: "+InvalidGetText); 
+		  Thread.sleep(4000);
+		 
 		
 		//  driver.navigate().back(); 
 		 // Thread.sleep(6000);
@@ -51,11 +51,9 @@ public class TestOrangeHRM {
 		Thread.sleep(5000);
 		Valid.btnLogout();
 		
-		
+		driver.close();
 		
 	}
 	
-	public void TreaDown() {
-		driver.close();
-	}
+
 }

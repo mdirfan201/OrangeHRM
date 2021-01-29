@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.OrangeHRMPageFactory.ValidIDandPassPagefactory;
@@ -32,7 +33,8 @@ public class Expense {
 		JavascriptExecutor jse= (JavascriptExecutor)driver;
 		jse.executeScript("scrollBy(0,500)");
 		ScreenShotUtility.CaptureScreenShot(driver, "Expense List");
-	
+		
+		Thread.sleep(5000);
+		driver.close();
 	}
-
 }

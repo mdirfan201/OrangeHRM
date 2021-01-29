@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import com.OrangeHRMPageFactory.RecruitmentPageFactory;
@@ -31,15 +32,13 @@ public class Recruitment {
 		
 		RecruitmentPageFactory rec= new RecruitmentPageFactory(driver);
 		rec.ClickOnRecruitment();
-		Thread.sleep(5000);
 		ScreenShotUtility.CaptureScreenShot(driver, "Recruitment");
+		Thread.sleep(5000);
+		
 		rec.ClickOnVacancies();
 		ScreenShotUtility.CaptureScreenShot(driver, "Vacancies");
-		
-	}
-	
-	@AfterMethod
-	public void tearDown() {
+		Thread.sleep(10000);
 		driver.close();
 	}
+	
 }

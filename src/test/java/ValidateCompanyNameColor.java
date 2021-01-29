@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.Color;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.OrangeHRMPageFactory.ValidIDandPassPagefactory;
@@ -31,10 +32,10 @@ public class ValidateCompanyNameColor {
 		
 		Thread.sleep(5000);
 		String alertMessage =driver.findElement(By.xpath("//p[contains(text(),'Company Name: OrangeHRM (Pvt) Ltd(Parallel Demo)')]")).getText();
-		
+		                                                  //p[contains(text(),'Company Name: OrangeHRM (Pvt) Lghvgvhg')]
 		if(alertMessage.contentEquals("Company Name: OrangeHRM (Pvt) Ltd(Parallel Demo)")) {
 		System.out.println("The Company name is :"+alertMessage);
-		
+			
 		}
 		//Ensure that banner color of the dialog is “#00ac51”.
 		WebElement eleSearch = driver.findElement(By.xpath("//h4[contains(text(),'About')]"));
@@ -44,5 +45,4 @@ public class ValidateCompanyNameColor {
 		System.out.println("The banner color of the dialog is: "+ hexcolor);
     }
 		
-	
 }
